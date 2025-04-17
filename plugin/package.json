@@ -1,0 +1,27 @@
+{
+  "name": "mcpadobe",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start:server": "cd server && python main.py"
+  },
+  "keywords": [
+    "adobe",
+    "premiere",
+    "mcp",
+    "llm"
+  ],
+  "author": "morim3",
+  "license": "ISC",
+  "description": "Adobe Premiere Pro MCP Server for LLM control",
+  "devDependencies": {
+    "@adobe/cc-ext-uxp-types": "^7.3.1",
+    "@types/node": "^20.17.30",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.0.0",
+    "webpack": "^5.99.5",
+    "webpack-cli": "^6.0.1"
+  }
+}

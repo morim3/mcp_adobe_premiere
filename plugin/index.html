@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="dist/bundle.js"></script>
+    <meta charset="UTF-8">
+    <title>MCP Client for Adobe Premiere Pro</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 16px;
+            font-family: 'Adobe Clean', sans-serif;
+            background-color: #232323;
+            color: #e3e3e3;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .header {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 8px;
+        }
+        .connection-section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .url-input {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .url-input label {
+            font-size: 14px;
+        }
+        .url-input input {
+            padding: 6px;
+            font-size: 14px;
+            border-radius: 4px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: #e3e3e3;
+        }
+        .button-group {
+            display: flex;
+            gap: 8px;
+        }
+        button {
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            background-color: #1473e6;
+            color: white;
+        }
+        button:hover {
+            background-color: #0d66d0;
+        }
+        button:disabled {
+            background-color: #444;
+            color: #888;
+            cursor: not-allowed;
+        }
+        #disconnect {
+            background-color: #e34850;
+        }
+        #disconnect:hover {
+            background-color: #c9252d;
+        }
+        #disconnect:disabled {
+            background-color: #444;
+            color: #888;
+        }
+        .status-section {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #333;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">MCP Client for Adobe Premiere Pro</div>
+        
+        <div class="connection-section">
+            <div class="url-input">
+                <label for="serverUrl">Server URL:</label>
+                <input type="text" id="serverUrl" placeholder="ws://localhost:8765" />
+            </div>
+            
+            <div class="button-group">
+                <button id="connect">Connect</button>
+                <button id="disconnect">Disconnect</button>
+            </div>
+        </div>
+        
+        <div class="status-section">
+            <div id="status">Status: Disconnected</div>
+        </div>
+    </div>
+
+</body>
+</html>

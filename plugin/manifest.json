@@ -1,0 +1,47 @@
+{
+  "id": "com.morim3.mcpadobe",
+  "name": "MCPAdobe",
+  "version": "1.0.0",
+  "main": "index.html",
+  "host": {
+    "app": "premierepro",
+    "minVersion": "25.3.0"
+  },
+  "manifestVersion": 5,
+  "requiredPermissions": {
+    "localFileSystem": "request",
+    "clipboard": "readAndWrite",
+      "network": {
+          "domains": [
+              "localhost",
+              "https://www.adobe.com",
+              "https://*.adobeprerelease.com",
+              "wss://*.myplugin.com"
+          ]
+      }
+  },
+  
+  "entrypoints": [
+    {
+      "type": "panel",
+      "id": "mcpadobe",
+      "label": "MCPAdobe",
+      "minimumSize": {
+        "width": 320,
+        "height": 300
+      },
+      "maximumSize": {
+        "width": 2000,
+        "height": 2000
+      },
+      "preferredDockedSize": {
+        "width": 320,
+        "height": 300
+      },
+      "preferredFloatingSize": {
+        "width": 320,
+        "height": 300
+      }
+    }
+  ]
+}
